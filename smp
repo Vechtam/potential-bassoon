@@ -1,0 +1,27 @@
+
+<html>
+<head>
+  <title>Cooking Social Media Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Welcome to the Cooking Social Media Platform!</h1>
+  <p>This is a place where cooking enthusiasts can share recipes, tips, and interact with each other.</p>
+  <section id="user-profile">
+    <h2>User Profile</h2>
+    <p>Name: <span id="user-name"></span></p>
+    <p>Bio: <span id="user-bio"></span></p>
+  </section>
+  <section id="recipe-posts">
+    <h2>Recipe Posts</h2>
+    <div id="posts"></div>
+  </section>
+  <section id="comments-section">
+    <h2>Comments</h2>
+    <div id="comments"></div>
+    <input type="text" id="new-comment" placeholder="Write a comment...">
+    <button id="post-comment">Post Comment</button>
+  </section>
+</body>
+</html>
