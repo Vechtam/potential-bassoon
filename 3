@@ -1,0 +1,30 @@
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Welcome to the Cooking Social Media Platform!');
+  // Mock user data
+  const userName = 'John Doe';
+  const userBio = 'I love cooking and sharing my recipes.';
+  document.getElementById('user-name').textContent = userName;
+  document.getElementById('user-bio').textContent = userBio;
+  // Mock recipe posts
+  const posts = [
+    {title: 'Spaghetti Carbonara', content: 'A classic Italian dish...'},
+    {title: 'Chocolate Cake', content: 'A delicious dessert...'}
+  ];
+  const postsContainer = document.getElementById('posts');
+  posts.forEach(post => {
+    const postElement = document.createElement('div');
+    postElement.innerHTML = `<h3>${post.title}</h3><p>${post.content}</p>`;
+    postsContainer.appendChild(postElement);
+  });
+  // Comments section
+  const commentsContainer = document.getElementById('comments');
+  document.getElementById('post-comment').addEventListener('click', function() {
+    const newComment = document.getElementById('new-comment').value;
+    if (newComment) {
+      const commentElement = document.createElement('p');
+      commentElement.textContent = newComment;
+      commentsContainer.appendChild(commentElement);
+      document.getElementById('new-comment').value = '';
+    }
+  });
+});
